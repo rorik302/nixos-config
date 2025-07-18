@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 echo "Синхронизация ~/nixos-config -> /etc/nixos"
