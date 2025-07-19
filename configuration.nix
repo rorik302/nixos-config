@@ -77,15 +77,15 @@
     keyMap = "us";
   };
 
-  users = {
-    users = {
-      rorik = {
-        isNormalUser = true;
-	extraGroups = [ "wheel" ];
+	#  users = {
+	#    users = {
+	#      rorik = {
+	#        isNormalUser = true;
+	# extraGroups = [ "wheel" ];
 	# shell = pkgs.fish;
-      };
-    };
-  };
+  #     };
+  #   };
+  # };
 
   environment = {
     systemPackages = with pkgs; [
