@@ -21,32 +21,32 @@
   };
 
   services = {
-    pipewire = {
-      enable = true;
-      pulse = {
-        enable = true;
-      };
-    };
-    gnome = {
-      gnome-keyring = {
-        enable = true;
-      };
-    };
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland = {
-	  enable = true;
-	};
-      };
-    };
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "us,ru";
-	options = "grp:alt_shift_toggle";
-      };
-    };
+	#    pipewire = {
+	#      enable = true;
+	#      pulse = {
+	#        enable = true;
+	#      };
+	#    };
+	#    gnome = {
+	#      gnome-keyring = {
+	#        enable = true;
+	#      };
+	#    };
+	#    displayManager = {
+	#      sddm = {
+	#        enable = true;
+	#        wayland = {
+	#   enable = true;
+	# };
+	#      };
+	#    };
+	#    xserver = {
+	#      enable = true;
+	#      xkb = {
+	#        layout = "us,ru";
+	# options = "grp:alt_shift_toggle";
+	#      };
+	#    };
     openssh = {
       enable = true;
     };
@@ -68,6 +68,7 @@
       "en_US.UTF-8/UTF-8"
       "ru_RU.UTF-8/UTF-8"
     ];
+
     defaultLocale = "en_US.UTF-8";
   };
 
@@ -81,22 +82,22 @@
       rorik = {
         isNormalUser = true;
 	extraGroups = [ "wheel" ];
-	shell = pkgs.fish;
+	# shell = pkgs.fish;
       };
     };
   };
 
   environment = {
     systemPackages = with pkgs; [
-      home-manager
+      # home-manager
       neovim
       gitFull
       curl
       wget
-      hyprland
-      yazi
-      lazygit
-      fish
+      # hyprland
+      # yazi
+      # lazygit
+      # fish
     ];
   };
 
@@ -111,19 +112,19 @@
 	};
       };
     };
-    fish = {
-      enable = true;
-    };
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-    };
-    yazi = {
-      enable = true;
-    };
-    lazygit = {
-      enable = true;
-    };
+    # fish = {
+    #   enable = true;
+    # };
+    # hyprland = {
+    #   enable = true;
+    #   withUWSM = true;
+    # };
+    # yazi = {
+    #   enable = true;
+    # };
+    # lazygit = {
+    #   enable = true;
+    # };
   };
 
   system.stateVersion = "25.05";
