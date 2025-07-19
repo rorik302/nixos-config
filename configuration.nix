@@ -15,7 +15,7 @@
     kernelParams = [
       "resume_offset=533760"
     ];
-    resumeDevice = "/dev/vda/nixos";
+    resumeDevice = "/dev/disk/by-label/nixos";
   };
 
   services = {
@@ -39,8 +39,10 @@
       };
     };
     xserver = {
+      enable = true;
       xkb = {
-        layout = "us";
+        layout = "us,ru";
+	options = "grp:alt_shift_toggle";
       };
     };
     openssh = {
@@ -73,8 +75,6 @@
       rorik = {
         isNormalUser = true;
 	extraGroups = [ "wheel" ];
-	packages = with pkgs; [
-	];
       };
     };
   };
@@ -85,8 +85,9 @@
       gitFull
       curl
       wget
-      gnome-keyring
-      libsecret
+      hyprland
+      yazi
+      lazygit
     ];
   };
 
@@ -99,11 +100,18 @@
           name = "Aleksandr Danilenko";
 	  email = "rorik302@gmail.com";
 	};
-        credential = {
-	  helper = "libsecret";
-	};
-       };
-     };
+      };
+    };
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+    };
+    yazi = {
+      enable = true;
+    };
+    lazygit = {
+      enable = true;
+    };
   };
 
   system.stateVersion = "25.05";
