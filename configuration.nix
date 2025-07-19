@@ -79,6 +79,7 @@
       rorik = {
         isNormalUser = true;
 	extraGroups = [ "wheel" ];
+	shell = pkgs.fish;
       };
     };
   };
@@ -92,6 +93,7 @@
       hyprland
       yazi
       lazygit
+      fish
     ];
   };
 
@@ -105,6 +107,9 @@
 	  email = "rorik302@gmail.com";
 	};
       };
+    };
+    fish = {
+      enable = true;
     };
     hyprland = {
       enable = true;
