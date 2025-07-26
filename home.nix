@@ -8,10 +8,51 @@
     stateVersion = "25.05";
   };
 
+  programs.eza = {
+    enable = true;
+    extraOptions = [
+      "--icons"
+      "--header"
+      "--group-directories-first"
+      "--color=always"
+      "--git-repos"
+      "--total-size"
+    ];
+  };
+
+  programs.navi = {
+    enable = true;
+  };
+
+  programs.atuin = {
+    enable = true;
+    settings = {
+      invert = true;
+      style = "full";
+    };
+  };
+
   programs.fish = {
     enable = true;
+    shellAliases = {
+      ls = "eza";
+      tree = "eza --tree";
+    };
     shellInit = ''
       set -g fish_greeting "" 
+
+      # zoxide
+      zoxide init fish | source
+
+      # fzf
+      fzf --fish | source
+      set -g FZF_DEFAULT_OPTS "--exact --ignore-case --style full --preview 'bat -n --color=always {}'"
+
+      # atuin
+      atuin init fish | source
+
+      # navi
+      navi widget fish | source
     '';
     functions = {
       y = ''
@@ -23,6 +64,14 @@
 	rm -f -- "$tmp"
       '';
     };
+  };
+
+  programs.bat = {
+    enable = true;
+  };
+
+  programs.fzf = {
+    enable = true;
   };
 
   programs.neovim = {
@@ -39,6 +88,10 @@
         linemode = "size";
       };
     };
+  };
+
+  programs.zoxide = {
+    enable = true;
   };
 
   programs.lazygit = {
