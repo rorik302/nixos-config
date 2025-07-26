@@ -72,6 +72,7 @@
       tree
       git
       neovim
+      timeshift
     ];
   };
 
