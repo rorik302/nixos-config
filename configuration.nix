@@ -73,7 +73,6 @@
     packages = with pkgs; [
       tree
       git
-      neovim
       timeshift
     ];
     shell = pkgs.fish;

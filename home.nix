@@ -11,4 +11,9 @@
 
     stateVersion = "25.05";
   };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 }
