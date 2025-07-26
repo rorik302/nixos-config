@@ -17,7 +17,7 @@
         system = "x86_64-linux";
 	specialArgs = { inherit inputs; };
 	modules = [ 
-	  ./configuration.nix
+	  ./system
 	  
 	  home-manager.nixosModules.home-manager
 	  {
@@ -25,7 +25,7 @@
 	      useGlobalPkgs = true;
 	      useUserPackages = true;
 	      users = {
-	        rorik = ./home.nix;
+	        rorik = ./users/rorik/home.nix;
 	      };
 	    };
 	  }
