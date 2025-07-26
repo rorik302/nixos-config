@@ -8,6 +8,10 @@
     stateVersion = "25.05";
   };
 
+  programs.starship = {
+    enable = true;
+  };
+
   programs.eza = {
     enable = true;
     extraOptions = [
@@ -53,6 +57,9 @@
 
       # navi
       navi widget fish | source
+
+      # starship
+      starship init fish | source
     '';
     functions = {
       y = ''
