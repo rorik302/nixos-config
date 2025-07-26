@@ -1,15 +1,18 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./shell.nix
-  ];
-
   home = {
     username = "rorik";
     homeDirectory = "/home/rorik";
 
     stateVersion = "25.05";
+  };
+
+  programs.fish = {
+    enable = true;
+    shellInit = ''
+      set -g fish_greeting "" 
+    '';
   };
 
   programs.neovim = {
