@@ -64,6 +64,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
+  programs.fish.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rorik = {
     isNormalUser = true;
@@ -74,6 +76,7 @@
       neovim
       timeshift
     ];
+    shell = pkgs.fish;
   };
 
   # programs.firefox.enable = true;
