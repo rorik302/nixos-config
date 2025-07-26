@@ -25,7 +25,7 @@
 	      useGlobalPkgs = true;
 	      useUserPackages = true;
 	      users = {
-	        rorik = ./users/rorik/home.nix;
+	        rorik = ./users/rorik;
 	      };
 	    };
 	  }
