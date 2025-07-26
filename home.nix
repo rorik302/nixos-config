@@ -16,4 +16,8 @@
     enable = true;
     defaultEditor = true;
   };
+
+  programs.yazi = {
+    enable = true;
+  };
 }
