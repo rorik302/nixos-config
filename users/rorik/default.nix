@@ -5,7 +5,9 @@
     ./atuin.nix
     ./bat.nix
     ./eza.nix
+    ./ghostty.nix
     ./home.nix
+    ./hyprland
     ./fish.nix
     ./fzf.nix
     ./lazygit.nix
