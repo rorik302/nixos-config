@@ -5,6 +5,7 @@
     ./audio.nix
     ./console.nix
     ./datetime.nix
+    ./fonts.nix
     ./grub.nix
     ./hardware.nix
     ./locale.nix
