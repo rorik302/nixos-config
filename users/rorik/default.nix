@@ -8,6 +8,7 @@
     ./ghostty.nix
     ./home.nix
     ./hyprland
+    ./hyprpanel.nix
     ./fish.nix
     ./fzf.nix
     ./lazygit.nix
